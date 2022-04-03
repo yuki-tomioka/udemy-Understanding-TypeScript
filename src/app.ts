@@ -13,7 +13,7 @@ class Department {
   }
 
   addEmployee(employee: string){
-    this.id = 'd2';
+    // this.id = 'd2';
     this.employees.push(employee);
   }
 
