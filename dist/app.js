@@ -1,9 +1,10 @@
 "use strict";
-class Department {
-    constructor(n) {
+var Department = (function () {
+    function Department(n) {
         this.name = n;
     }
-}
-const Accounting = new Department('Accounting');
+    return Department;
+}());
+var Accounting = new Department('Accounting');
 console.log(Accounting);
 //# sourceMappingURL=app.js.map
