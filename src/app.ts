@@ -1,11 +1,11 @@
 class Department {
-  private id: string
-  name: string;
+  // private id: string
+  // name: string;
   private employees: string[] = [];
 
-  constructor(id:string, n:string) {
-    this.id = id;
-    this.name = n;
+  constructor(private id:string, public name:string) {
+    // this.id = id;
+    // this.name = n;
   }
 
   describe(this: Department) {
