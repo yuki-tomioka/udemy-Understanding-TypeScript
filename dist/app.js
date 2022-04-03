@@ -21,4 +21,5 @@ var accounting = new Department('d1', 'Accounting');
 accounting.addEmployee('Max');
 accounting.addEmployee('Manu');
 accounting.describe();
+accounting.printEmployeeInformation();
 //# sourceMappingURL=app.js.map

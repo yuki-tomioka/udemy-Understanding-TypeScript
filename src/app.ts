@@ -31,6 +31,7 @@ accounting.addEmployee('Manu')
 // accounting.employees[2] = "Anna"
 
 accounting.describe()
+accounting.printEmployeeInformation()
 
 // const accountingCopy = {name: 'DUMMY', describe: accounting.describe };
 
