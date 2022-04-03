@@ -19,6 +19,5 @@ var Department = (function () {
 var accounting = new Department('Accounting');
 accounting.addEmployee('Max');
 accounting.addEmployee('Manu');
-accounting.employees[2] = "Anna";
 accounting.describe();
 //# sourceMappingURL=app.js.map
