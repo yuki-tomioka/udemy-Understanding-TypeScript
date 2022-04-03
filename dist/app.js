@@ -56,6 +56,12 @@ var AccountingDepartment = (function (_super) {
             }
             throw new Error("レポートが見つかりません。");
         },
+        set: function (value) {
+            if (!value) {
+                throw new Error("正しい値を設定してください。");
+            }
+            this.addReport(value);
+        },
         enumerable: false,
         configurable: true
     });
@@ -80,6 +86,7 @@ it.addEmployee("Manu");
 it.describe();
 it.printEmployeeInformation();
 var accounting = new AccountingDepartment("d2", []);
+accounting.mostRecentReport = "通期会計レポート";
 accounting.addReport("Something");
 accounting.printReports();
 console.log(accounting.mostRecentReport);
