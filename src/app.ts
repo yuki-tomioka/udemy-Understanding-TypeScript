@@ -1,10 +1,10 @@
-interface Greatable {
+interface Greetable {
   name: string;
 
   greet(phrase: string): void;
 }
 
-class Person implements Greatable {
+class Person implements Greetable {
   name: string;
   age = 30;
 
@@ -17,7 +17,7 @@ class Person implements Greatable {
   }
 }
 
-let user1: Greatable;
+let user1: Greetable;
 
 user1 = new Person("max");
 
