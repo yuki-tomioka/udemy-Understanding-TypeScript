@@ -1,8 +1,10 @@
 class Department {
+  private id: string
   name: string;
   private employees: string[] = [];
 
-  constructor(n:string) {
+  constructor(id:string, n:string) {
+    this.id = id;
     this.name = n;
   }
 
