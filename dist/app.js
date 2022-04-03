@@ -35,7 +35,7 @@ var Department = (function () {
 var ITDepartment = (function (_super) {
     __extends(ITDepartment, _super);
     function ITDepartment(id, admins) {
-        var _this = _super.call(this, id, 'IT') || this;
+        var _this = _super.call(this, id, "IT") || this;
         _this.admins = admins;
         return _this;
     }
@@ -44,7 +44,7 @@ var ITDepartment = (function (_super) {
 var AccountingDepartment = (function (_super) {
     __extends(AccountingDepartment, _super);
     function AccountingDepartment(id, reports) {
-        var _this = _super.call(this, id, 'Accounting') || this;
+        var _this = _super.call(this, id, "Accounting") || this;
         _this.reports = reports;
         return _this;
     }
@@ -56,12 +56,12 @@ var AccountingDepartment = (function (_super) {
     };
     return AccountingDepartment;
 }(Department));
-var it = new ITDepartment('d1', ['Max']);
-it.addEmployee('Max');
-it.addEmployee('Manu');
+var it = new ITDepartment("d1", ["Max"]);
+it.addEmployee("Max");
+it.addEmployee("Manu");
 it.describe();
 it.printEmployeeInformation();
-var accounting = new AccountingDepartment('d2', []);
+var accounting = new AccountingDepartment("d2", []);
 accounting.addReport("Something");
 accounting.printReports();
 //# sourceMappingURL=app.js.map
