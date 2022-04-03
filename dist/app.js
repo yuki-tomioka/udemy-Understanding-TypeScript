@@ -24,9 +24,6 @@ var Department = (function () {
     Department.createEmployee = function (name) {
         return { name: name };
     };
-    Department.prototype.describe = function () {
-        console.log("Department(".concat(this.id, "): ").concat(this.name));
-    };
     Department.prototype.addEmployee = function (employee) {
         this.employees.push(employee);
     };
@@ -44,6 +41,9 @@ var ITDepartment = (function (_super) {
         _this.admins = admins;
         return _this;
     }
+    ITDepartment.prototype.describe = function () {
+        console.log("IT部門 - ID: " + this.id);
+    };
     return ITDepartment;
 }(Department));
 var AccountingDepartment = (function (_super) {
@@ -70,6 +70,9 @@ var AccountingDepartment = (function (_super) {
         enumerable: false,
         configurable: true
     });
+    AccountingDepartment.prototype.describe = function () {
+        console.log("会計部門 - ID: " + this.id);
+    };
     AccountingDepartment.prototype.addReport = function (text) {
         this.reports.push(text);
         this.lastReport = text;
@@ -95,9 +98,8 @@ it.printEmployeeInformation();
 var accounting = new AccountingDepartment("d2", []);
 accounting.mostRecentReport = "通期会計レポート";
 accounting.addReport("Something");
-accounting.printReports();
 console.log(accounting.mostRecentReport);
 accounting.addEmployee("Max");
 accounting.addEmployee("Manu");
-accounting.printEmployeeInformation();
+accounting.describe();
 //# sourceMappingURL=app.js.map
