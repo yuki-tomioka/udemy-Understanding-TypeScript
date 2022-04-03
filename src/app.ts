@@ -32,6 +32,21 @@ class ITDepartment extends Department {
   }
 }
 
+class AccountingDepartment extends Department {
+  constructor(id:string, private reports: string[]) {
+    super(id, 'Accounting');
+  }
+
+  addReport(text: string) {
+    this.reports.push(text)
+  }
+
+  printReports() {
+    console.log(this.reports)
+  }
+}
+
+
 const it =  new ITDepartment('d1', ['Max']);
 
 it.addEmployee('Max')
@@ -41,6 +56,10 @@ it.addEmployee('Manu')
 
 it.describe()
 it.printEmployeeInformation()
+
+const accounting = new AccountingDepartment('d2', []);
+accounting.addReport("Something")
+accounting.printReports();
 
 // const accountingCopy = {name: 'DUMMY', describe: accounting.describe };
 

@@ -41,9 +41,27 @@ var ITDepartment = (function (_super) {
     }
     return ITDepartment;
 }(Department));
+var AccountingDepartment = (function (_super) {
+    __extends(AccountingDepartment, _super);
+    function AccountingDepartment(id, reports) {
+        var _this = _super.call(this, id, 'Accounting') || this;
+        _this.reports = reports;
+        return _this;
+    }
+    AccountingDepartment.prototype.addReport = function (text) {
+        this.reports.push(text);
+    };
+    AccountingDepartment.prototype.printReports = function () {
+        console.log(this.reports);
+    };
+    return AccountingDepartment;
+}(Department));
 var it = new ITDepartment('d1', ['Max']);
 it.addEmployee('Max');
 it.addEmployee('Manu');
 it.describe();
 it.printEmployeeInformation();
+var accounting = new AccountingDepartment('d2', []);
+accounting.addReport("Something");
+accounting.printReports();
 //# sourceMappingURL=app.js.map
