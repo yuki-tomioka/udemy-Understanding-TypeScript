@@ -118,13 +118,28 @@ class ProjectItem extends Component {
             return (this.project.manday / 20).toString() + "人月";
         }
     }
-    configure() { }
+    dragStartHandler(event) {
+        console.log(event);
+    }
+    dragEndHandler(_event) {
+        console.log("drag終了");
+    }
+    configure() {
+        this.element, addEventListener("dragstart", this.dragStartHandler);
+        this.element, addEventListener("dragend", this.dragEndHandler);
+    }
     renderContent() {
         this.element.querySelector("h2").textContent = this.project.title;
         this.element.querySelector("h3").textContent = this.manday;
         this.element.querySelector("p").textContent = this.project.description;
     }
 }
+__decorate([
+    autoBind
+], ProjectItem.prototype, "dragStartHandler", null);
+__decorate([
+    autoBind
+], ProjectItem.prototype, "dragEndHandler", null);
 class ProjectList extends Component {
     constructor(type) {
         super("project-list", "app", false, `${type}-projects`);
